@@ -1,0 +1,141 @@
+
+  
+  :root {
+    --heights: 60vh;
+    --widths: 100vw;
+  }
+  
+  .slider-container {
+    height: var(--heights);
+    width: var(--widths);
+    /* position: relative; */
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .active {
+    display: inline-block;
+  }
+  
+  .inactive {
+    display: none;
+  }
+  
+  .slides {
+    height: var(--heights);
+    width: var(--widths);
+    /* position: relative; */
+  }
+  
+  .slide-image {
+    width: 100%;
+    height: 100%;
+    /* position: absolute; */
+    object-fit: cover;
+  }
+  
+  
+  .prev,
+  .next {
+    color: transparent;
+    cursor: pointer;
+    z-index: 100;
+    /* position: absolute; */
+
+    top: 50%;
+    width: auto;
+    padding: 1rem;
+    margin-top: -3rem;
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 0px 5px 5px 0px;
+  }
+  
+  .slider-container:hover .prev,.slider-container:hover .next {
+    color: black
+  }
+  
+  .slider-container:hover .prev:hover,
+  .slider-container:hover .next:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 0.5s ease-in;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 5px 0px 0px 5px;
+  }
+  
+  .all-dots {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    top: 85%;
+    justify-content: center;
+    z-index: 200;
+  }
+  
+  .dot {
+    cursor: pointer;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 0px 3px;
+    background-color: transparent;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .slider-container:hover .dot:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  /* .active-dot {
+    background-color: rgba(255, 255, 255, 0.5);
+  } */
+  
+  .slider-container:hover .dot{
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .slider-container:hover .active-dot{
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .play-pause {
+    color: black;
+  }
+
+  @media screen and (max-width : 1000px){
+    .slider-container, .slides{
+      height: 50vh;
+    }
+  }
+
+  @media screen and (max-width : 750px){
+    .slider-container, .slides{
+      height: 40vh;
+    }
+  }
+
+
+  @media screen and (max-width : 600px){
+    .slider-container, .slides{
+      height: 36vh;
+    }
+  }
+
+
+
+  @media screen and (max-width : 500px){
+    .slider-container, .slides{
+      height: 34vh;
+    }
+  }
+
+  @media screen and (max-width : 400px){
+    .slider-container, .slides{
+      height: 26vh;
+    }
+  }

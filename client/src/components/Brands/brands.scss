@@ -1,0 +1,112 @@
+
+:root{
+    --primary_color : white;
+    --secondary_color : black;
+    /* --background-color1 : #F9EBC8; */
+    --background-color1 : #fcfcff;
+    --color-submenu : #82f6f1;
+    /* --color-navbar : #A0BCC2; */
+    --color-navbar : #ffffff;
+    --color-footer : #55BCC9;
+    --color-popular-items : #97CAEF;
+    --gap-bw-sections : 8rem;
+    --scrolling-width : 100vw;
+    --scrolling-height : 10vh;
+    --scrolling-elements : 20;
+    --scrolling-elements-displayed : 10;
+    --scrolling-element-width : calc(var(--scrolling-width)/ var(--scrolling-elements-displayed));
+    --scrolling-animation-durtion : calc(var(--scrolling-elements)*1s);
+
+}
+
+
+.scroll-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.scrolling{
+    width: var(--scrolling-width);
+    height: var(--scrolling-height);
+
+    display: flex;
+    margin-bottom: var(--gap-bw-sections);
+    overflow: hidden;
+}
+
+.scrolling:before, .scrolling:after{
+    position:absolute;
+    width: 8rem;
+    height: 10%;
+    content: "";
+    z-index: 1;
+    @media screen and (max-width : 800px){
+        width: 5rem;
+    }
+    @media screen and (max-width : 350px){
+        width: 3rem;
+    }
+}
+
+.scrolling:before{
+    left: 0;
+    background: linear-gradient(to right , var(--background-color1) 0%, transparent);
+}
+.scrolling:after{
+    right: 0;
+    background: linear-gradient(to left , var(--background-color1) 0%, transparent);
+}
+
+.scroll-content{
+    img{
+        width: 75%;
+        // height: 30px;
+    }
+    display: flex;
+    height: 100%;
+    animation: scrolling 30s linear infinite;
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+        // transform: scale(1);
+    }
+    100%{
+        transform: translateX(calc(-1*var(--scrolling-element-width) * var(--scrolling-elements)));
+        // transform: scale(1);
+    }
+}
+
+
+
+.scroll-content li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    width: var(--scrolling-element-width);
+    flex-shrink: 0;
+}
+
+
+
+@media screen and (max-width : 800px){
+
+    :root{
+        --scrolling-height : 8vh;
+        --scrolling-elements-displayed : 7;
+        --gap-bw-sections : 5rem;
+
+    }
+}
+@media screen and (max-width : 350px){
+
+    :root{
+        --scrolling-height : 5vh;
+        --scrolling-elements-displayed : 4;
+        --gap-bw-sections : 5rem;
+
+    }
+}

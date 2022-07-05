@@ -1,0 +1,76 @@
+.franchise{
+    .franchiseContainer{
+        padding: 20px;
+        height: 90vh;
+        background: linear-gradient(180deg, rgb(198, 228, 255) 20%,  rgb(255, 255, 255) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .info{
+            // padding: 50px;
+            text-align: start;
+            h1{
+                font-size: 70px;
+                font-weight: 400;
+            }
+
+            p{
+                margin-top: 10px;
+                font-size: 22px;
+                font-weight: 200;
+                color: rgb(0, 0, 0);
+            }
+
+            .contact{
+                background-color: rgb(113, 115, 255);
+                text-align: center;
+                border-radius: 15px;
+                margin-top: 20px;
+                padding: 10px;
+
+                color: rgb(0, 0, 0);
+                font-weight: 300;
+            }
+
+            .q{
+                font-style: italic;
+            }
+        }
+
+
+        @media screen and (max-width : 500px){
+            &{
+                .info{
+                    h1{
+                        font-size: 48px;
+        
+                    }
+
+                    p{
+                        font-size: 20px;
+                    }
+
+                }
+            }
+
+            
+        }
+        @media screen and (max-width : 400px){
+            &{
+                .info{
+                    h1{
+                        font-size: 38px;
+        
+                    }
+
+                }
+            }
+
+            
+        }
+
+
+        
+        
+    }
+}

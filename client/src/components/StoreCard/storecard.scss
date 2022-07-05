@@ -1,0 +1,62 @@
+.storeCard{
+    margin: 10px;
+    // width: 100%;
+    // height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    // border: solid 1px gray;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+
+    box-shadow: 2px 2px 8px -1px rgb(69, 69, 69);
+    text-transform: uppercase;
+
+    &:hover{
+        box-shadow: 3px 3px 12px 1px #7e7e7e
+
+    }
+
+
+    .storeName{
+        font-size: 20px;
+        margin-top: 5px;
+        font-weight: bold;
+        color: black;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    img{
+        margin-top: 10px;
+        width: 60%;
+        border-radius: 5px
+
+    
+    }
+
+    .storeInfo{
+        margin: 5px;
+        margin-top: 8px;
+        padding: 5px;
+        justify-content: space-between;
+        gap: 2rem;
+        color: rgb(45, 45, 45);
+        border-radius: 5px;
+        font-size: 14px;
+
+
+        span{
+            margin-top: 5px;
+        }
+    }
+
+    .storeAddress, .storeContact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}

@@ -1,0 +1,184 @@
+.navbar{
+    width: 100vw;
+    height: 10vh;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding: 10px;
+    text-transform: uppercase;
+
+    background-color: #e6352f;
+
+    .link{
+        text-decoration: none;
+        // color: white;
+    }
+
+
+
+    .left{
+        img{
+            width: 150px;
+        }
+    }
+
+
+    .center{
+        img{
+        width: 230px;
+        height: 70px;
+        }
+    }
+
+    .right{
+        display: flex;
+        align-items: center;
+
+
+        .active{
+            // color: green;
+            border-top: 1px white solid;
+            border-left: 1px white solid;
+        }
+        
+
+        span{
+            font-size: 14px;
+            cursor: pointer;
+            color: rgb(255, 255, 255);
+            &:hover{
+                color: rgb(0, 0, 0);
+            }
+        }
+
+        .home,.about,.store,.contact{
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            span{
+                margin-left: 5px;
+            }
+
+
+        }
+
+
+        .newBorn{
+            margin-right: 15px;
+            .newbornIcon{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .options{
+                display: none;
+                background-color: rgb(255, 82, 82);
+                border-radius: 10px;
+                color: rgb(0, 0, 0);
+                padding: 20px;
+                // position: absolute;
+                // top: 50px;
+            }
+
+            &:hover{
+                .options{
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    position: absolute;
+
+                    span{
+                        padding: 10px 0px;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+
+    .navbar_menu{
+            display: none;
+    }
+
+    @media screen and (max-width : 750px){
+        &{
+
+            font-size: 14px;
+            .center{
+                img{
+                width: 197.142857px;
+                height: 60px;
+                }
+            }
+
+
+            .right{
+                display: none;
+            }
+
+            .navbar_menu{
+                display: block;
+                color: white;
+                padding: 10px;
+
+                .toggle{
+                    cursor: pointer;
+                }
+
+
+                .toggle_wrapper{
+                    background: linear-gradient(180deg, rgb(68, 168, 255) 20%,  rgb(192, 178, 255) 100%);
+                    // height: 100vh;
+                    border-radius: 10px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 40vw;
+                    padding: 2rem;
+                    text-align: end;
+
+                    .toggle_items{
+                        // margin-left: 5rem;
+                        margin-top: 2rem;
+                        text-align: start;
+                        width: 70%;
+
+                        div{
+                            margin-top: 20px;
+                        }
+
+
+                        .newBorn{
+                            .newbornIcon{
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                            }
+                
+                            .options{
+                                display: none;
+                                color: rgb(63, 63, 63);
+                                padding: 0 10px;
+                            }
+                
+                            &:hover{
+                                .options{
+                                    display: flex;
+                                    flex-direction: column;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
